@@ -1,10 +1,15 @@
 {
-  "name": "pgats-2025-02-base",
+  "name": "pwd",
   "version": "1.0.0",
-  "description": "",
+  "description": "Se você é aluno da Pós-Graduação em Automação de Testes de Software (Turma 2), faça um fork desse repositório e boa sorte em seu trabalho de conclusão da disciplina.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-rest": "node rest/server.js",
+    "start-graphql": "node graphql/server.js",
+    "tests-graphql-external": "mocha tests/graphql/**/*.test.js --timeout 10000",
+    "tests-rest-external": "mocha tests/rest/**/*.test.js --timeout 10000",
+    "tests-rest-controller": "mocha tests/rest/controller/*.test.js --timeout 10000"
   },
   "repository": {
     "type": "git",
@@ -24,5 +29,14 @@
     "graphql": "^16.11.0",
     "jsonwebtoken": "^9.0.2",
     "swagger-ui-express": "^5.0.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "chai": "4.5.0",
+    "mocha": "^11.7.2",
+    "sinon": "^21.0.0",
+    "supertest": "^7.1.4"
   }
 }
