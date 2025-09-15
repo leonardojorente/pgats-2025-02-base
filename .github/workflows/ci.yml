@@ -20,7 +20,7 @@ jobs:
         run: npm run tests-rest-controller
       
       - name: Subir a API Rest
-        run: npm run start-rest
+        run: nohup npm run start-rest &
 
       - name: Esperar a API Rest estar Funcionando
         run: sleep 5
@@ -39,7 +39,7 @@ jobs:
       - run: npm install
 
       - name: Subir a API graphql
-        run: npm run start-graphql
+        run: nohup npm run start-graphql &
 
       - name: Esperar a API  graphql estar Funcionando
         run: sleep 5
