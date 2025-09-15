@@ -25,7 +25,6 @@ describe('Mock Login tests', () => {
                     password: '123456'
                 });
             
-            console.log(`respostaLogin: ${JSON.stringify(respostaLogin.body)}`)
             expect(respostaLogin.status).to.equal(500);
             expect(respostaLogin.body).to.have.property('error', 'Mensagem para login com email errado')
 
@@ -45,7 +44,6 @@ describe('Mock Login tests', () => {
                     password: '123456'
                 });
             
-            console.log(`respostaLogin: ${JSON.stringify(respostaLogin.body)}`)
             expect(respostaLogin.status).to.equal(200);
             expect(respostaLogin.body).to.have.property('name', 'Usuário de Teste')
 

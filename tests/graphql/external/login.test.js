@@ -11,8 +11,6 @@ describe('Login Tests', () => {
             const respostaLogin = await request('http://localhost:4000')
                 .post('/graphql')
                 .send(loginUser);
-            token = respostaLogin.body?.data?.loginUser?.token;
-            console.log('TOKEN:', token);
 
             expect(respostaLogin.status).to.equal(200);
             expect(respostaLogin.body.data.login).to.have.property('token');
